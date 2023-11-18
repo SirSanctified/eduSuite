@@ -1,17 +1,16 @@
-import './App.css'
-import Login from './features/auth/login'
-import Logout from './features/auth/logout'
+import { RootLayout } from "./components/layouts/RootLayout";
+import Dashboard from "./components/students/Dashboard";
+// import Login from "./components/auth/login";
 
 function App() {
-
   return (
-    <>
-      <div className="App" style={{ display: 'flex', justifyContent: 'space-between', padding: '20px', color: 'white' }}>
-        <Login />
-        <Logout />
-      </div>
-    </>
-  )
+      <RootLayout>
+        <div className="w-full min-h-screen px-4 sm:px-6 md:px-8">
+          {/* <Login /> */}
+          <Dashboard />
+        </div>
+      </RootLayout>
+  );
 }
 
-export default App
+export default App;

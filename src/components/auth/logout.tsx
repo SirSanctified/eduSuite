@@ -1,5 +1,6 @@
 import { useAppDispatch } from "../../app/store"
-import { logout } from "./authSlice"
+import { Button } from "../ui/button"
+import { logout } from "../../features/auth/authSlice"
 
 const Logout = () => {
   const dispatch = useAppDispatch()
@@ -14,7 +15,7 @@ const Logout = () => {
   return (
     <div>
       <h1>Logout</h1>
-      <button onClick={logoutUser}>Logout</button>
+      <Button onClick={logoutUser}>Logout</Button>
     </div>
   )
 }

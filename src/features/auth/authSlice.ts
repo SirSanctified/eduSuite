@@ -10,10 +10,10 @@ type ResponseData = {
     email?: string | null;
     id?: string | null;
     username?: string | null;
-  },
+  };
   error?: string | null;
-  status?: number
-}
+  status?: number;
+};
 
 const initialState: AuthState = {
   isLoading: false,
@@ -41,19 +41,20 @@ export const login = createAsyncThunk(
     ) {
       response = {
         data: {},
-          error: "Invalid credentials",
+        error: "Invalid credentials",
         status: 401,
       };
+    } else {
+      response = {
+        data: {
+          name: "John Doe",
+          email: "john@example.com",
+          id: "123",
+          username: "johndoe",
+        },
+        status: 200,
+      };
     }
-    response = {
-      data: {
-        name: "John Doe",
-        email: "john@example.com",
-        id: "123",
-        username: "johndoe",
-      },
-      status: 200,
-    };
 
     if (response.status !== 200) {
       throw new Error(response.error ?? "Unknown error");

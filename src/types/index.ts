@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export type AuthState = {
   isLoading: boolean;
   isAuthenticated: boolean;
@@ -20,4 +22,11 @@ export type User = {
 export type LoginPayload = {
   email: string;
   password: string;
+};
+
+export type AdminDashboardApps = {
+  name: string;
+  icon: ReactElement;
+  path: string;
+  color: string;
 };
