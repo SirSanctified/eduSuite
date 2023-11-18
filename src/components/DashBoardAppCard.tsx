@@ -10,7 +10,7 @@ const DashBoardAppCard: React.FC<AdminDashboardApps> = ({
 }) => {
   return (
     <Card
-      className="w-full sm:w-[175px] h-[200px] sm:h-[120px] rounded-md shadow-lg shadow-black/50 hover:scale-105 hover:opacity-75 transition-all duration-300 ease-linear"
+      className="w-full sm:w-[175px] h-[200px] sm:h-[120px] rounded-lg shadow-lg shadow-black/50 hover:scale-105 hover:opacity-75 transition-all duration-300 ease-linear"
       style={{ backgroundColor: color }}
     >
       <a
